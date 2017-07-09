@@ -21,7 +21,7 @@
 		die ("Brak wymaganych parametrów");
 	}
 	else {
-		$rrd_file = $argv[0];
+		$rrd_file = $argv[0].".rrd";
 		$rrd_para = $argv[1];
 	}
 	if (isset($argv[2])) $rrd_desc = urldecode($argv[2]);
