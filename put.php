@@ -36,6 +36,7 @@ if (isset($_GET["auth"])) {
 
 $rrd_file = $webserver_path."IoTSensorServer/rrd_data/".$sensor.".rrd";
 if (file_exists($rrd_file)) {
+    echo $rrd_file.PHP_EOL;
     rrd_update($rrd_file, array("N:$value"));
 }
 echo "Received data from sensor=$sensor, value=$value";
