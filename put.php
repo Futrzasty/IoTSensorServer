@@ -34,7 +34,7 @@ if (isset($_GET["auth"])) {
     <body>
 <?php
 
-$rrd_file = $webserver_path."IoTSensorServer/rrd_data/".$sensor;
+$rrd_file = $webserver_path."IoTSensorServer/rrd_data/".$sensor.".rrd";
 if (file_exists($rrd_file)) {
     rrd_update($rrd_file, array("N:$value"));
 }
