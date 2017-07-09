@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+config.php
+.idea/
+rrd_data/
+!rrd_data/README.md
