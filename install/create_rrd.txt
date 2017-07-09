@@ -11,3 +11,9 @@ Archive point is saved every 1min, archive is kept for 16hour 40min back.
 Archive point is saved every 15min, archive is kept for 10day 10hour back.
 Archive point is saved every 1hour, archive is kept for 6month 25day 8hour back.
 Archive point is saved every 5hour, archive is kept for 2year 10month 6day 16hour back.
+
+
+--------------------------------------------
+http://husky.mruczek.org/IoTSensorServer/put.php?sensor=s01&value=25.4
+
+http://husky.mruczek.org/IoTSensorServer/rrd_graph.php?s01;value
