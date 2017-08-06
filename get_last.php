@@ -20,15 +20,6 @@ if (isset($_GET["auth"])) {
     $auth = 0;
 }
 
-?>
-<!DOCTYPE html>
-    <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-<?php
-
 $value = array();
 
 $rrd_file = $webserver_path."IoTSensorServer/rrd_data/".$sensor.".rrd";
@@ -38,11 +29,7 @@ if (file_exists($rrd_file)) {
 } else {
     echo "No such sensor";
 }
-var_dump($value);
-echo "<br/>";
+//var_dump($value);
+//echo "<br/>";
 echo $value["data"][0];
 //echo "Received data from sensor=$sensor, value=$value";
-
-?>
-    </body>
-</html>
