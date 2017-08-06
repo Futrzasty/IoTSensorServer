@@ -40,7 +40,7 @@ if (file_exists($rrd_file)) {
 }
 var_dump($value);
 echo "<br/>";
-echo $value;
+echo $value["data"];
 //echo "Received data from sensor=$sensor, value=$value";
 
 ?>
