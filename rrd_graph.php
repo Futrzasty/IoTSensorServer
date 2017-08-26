@@ -29,7 +29,7 @@
 	if (isset($argv[4])) $rrd_width = $argv[4];
 	if (isset($argv[5])) $rrd_heigh = $argv[5];
 
-	$opt_default = array( "--end", "now", "--start=$rrd_start", "--width=$rrd_width", "--height=$rrd_heigh", "--full-size-mode", "--border=0", "--color=BACK#444444", "--color=CANVAS#444444", "--color=FONT#cccccc", "--color=ARROW#222222",
+	$opt_default = array( "--end", "now", "--start=$rrd_start", "--width=$rrd_width", "--height=$rrd_heigh", "--full-size-mode", "--border=0", "-A", "-Y", "--color=BACK#444444", "--color=CANVAS#444444", "--color=FONT#cccccc", "--color=ARROW#222222",
 					"DEF:param=$webserver_path/IoTSensorServer/rrd_data/$rrd_file:$rrd_para:AVERAGE",
 					"LINE1:param#ff0000:$rrd_desc",
 	);
