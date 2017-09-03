@@ -9,7 +9,7 @@
 </head>
 <body style="background-color: black; font-family: Arial, sans-serif;">
 
-<div style="text-align: center; margin: auto; width: 100%;">
+<div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
     Temperatura:<br/>
     <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
     <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
