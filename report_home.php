@@ -14,7 +14,7 @@
     <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
     <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
     Ciśnienie atmosferyczne:<br/>
-    <img alt="wykres" src="rrd_graph.php?s02a;value;temp;end-48h"/><br/>
+    <img alt="wykres" src="rrd_graph.php?s02a;value;press;end-48h"/><br/>
 </div>
 
 
