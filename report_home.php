@@ -7,14 +7,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>IoT Server</title>
 </head>
-<body style="background-color: dimgrey;">
+<body style="background-color: black; font-family: Arial, sans-serif;">
 
 <div style="text-align: center; margin: auto; width: 100%;">
     Temperatura:<br/>
-    <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-24h"/><br/>
-    <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-24h"/><br/>
+    <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
+    <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
     Ciśnienie atmosferyczne:<br/>
-    <img alt="wykres" src="rrd_graph.php?s02a;value;temp;end-24h"/><br/>
+    <img alt="wykres" src="rrd_graph.php?s02a;value;temp;end-48h"/><br/>
 </div>
 
 
