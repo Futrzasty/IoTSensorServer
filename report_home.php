@@ -10,13 +10,27 @@
 <body style="background-color: black; font-family: Arial, sans-serif;">
 
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
-    Temperatura:<br/>
+    Temperatura (s01):<br/>
     <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
+    Temperatura (s02b):<br/>
     <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
-    Ciśnienie atmosferyczne:<br/>
+    Ciśnienie atmosferyczne (s02a):<br/>
     <img alt="wykres" src="rrd_graph.php?s02a;value;press;end-48h"/><br/>
-    Temperatura zewnętrzna:<br/>
+    Temperatura zewnętrzna (s03):<br/>
     <img alt="wykres" src="rrd_graph.php?s03;value;temp;end-48h"/><br/>
+    Temperatura (s04t):<br/>
+    <img alt="wykres" src="rrd_graph.php?s04t;value;temp;end-48h"/><br/>
+    Ciśnienie atmosferyczne (s04p):<br/>
+    <img alt="wykres" src="rrd_graph.php?s04p;value;press;end-48h"/><br/>
+    Wilgotność (s04h):<br/>
+    <img alt="wykres" src="rrd_graph.php?s04h;value;temp;end-48h"/><br/>
+    IAQ (s04i):<br/>
+    <img alt="wykres" src="rrd_graph.php?s04i;value;press;end-48h"/><br/>
+    Temperatura zewnętrzna (battery - s05):<br/>
+    <img alt="wykres" src="rrd_graph.php?s05;value;temp;end-48h"/><br/>
+    Temperatura zewnętrzna (battery - s06):<br/>
+    <img alt="wykres" src="rrd_graph.php?s06;value;temp;end-48h"/><br/>
+
 </div>
 
 
