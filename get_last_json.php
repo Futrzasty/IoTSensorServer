@@ -29,8 +29,10 @@ if (file_exists($rrd_file)) {
 } else {
     echo "No such sensor";
 }
-var_dump($value);
-echo "<br/>";
-echo date(DATE_RFC2822, $value["last_update"]);
-echo $value["data"][0];
+//var_dump($value);
+//echo "<br/>";
+//echo date(DATE_RFC2822, $value["last_update"]);
+//echo $value["data"][0];
 //echo "Received data from sensor=$sensor, value=$value";
+$output = array ('Date' => date(DATE_RFC2822, $value["last_update"]), 'Value' => $value["data"][0]);
+echo json_encode($output);
