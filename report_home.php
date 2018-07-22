@@ -27,23 +27,86 @@ function get_JSON_value ($sensor) {
     ?>
     <br/>
     <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
-    Temperatura (s02b):<br/>
+    Temperatura (s02b):
+    <?php
+    $j = get_JSON_value('s02b');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
-    Ciśnienie atmosferyczne (s02a):<br/>
+    Ciśnienie atmosferyczne (s02a):
+    <?php
+    $j = get_JSON_value('s02a');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s02a;value;press;end-48h"/><br/>
-    Temperatura zewnętrzna (s03):<br/>
+    Temperatura zewnętrzna (s03):
+    <?php
+    $j = get_JSON_value('s03');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s03;value;temp;end-48h"/><br/>
-    Temperatura (s04t):<br/>
+    Temperatura (s04t):
+    <?php
+    $j = get_JSON_value('s04t');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s04t;value;temp;end-48h"/><br/>
-    Ciśnienie atmosferyczne (s04p):<br/>
+    Ciśnienie atmosferyczne (s04p):
+    <?php
+    $j = get_JSON_value('s04p');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s04p;value;press;end-48h"/><br/>
-    Wilgotność (s04h):<br/>
+    Wilgotność (s04h):
+    <?php
+    $j = get_JSON_value('s04h');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s04h;value;temp;end-48h"/><br/>
-    IAQ (s04i):<br/>
+    IAQ (s04i):
+    <?php
+    $j = get_JSON_value('s04i');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s04i;value;press;end-48h"/><br/>
-    Temperatura zewnętrzna (battery - s05):<br/>
+    Temperatura zewnętrzna (battery - s05):
+    <?php
+    $j = get_JSON_value('s05');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s05;value;temp;end-48h"/><br/>
-    Temperatura zewnętrzna (battery - s06):<br/>
+    Temperatura zewnętrzna (battery - s06):
+    <?php
+    $j = get_JSON_value('s06');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s06;value;temp;end-48h"/><br/>
 
 </div>
