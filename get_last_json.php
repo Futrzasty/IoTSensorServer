@@ -31,5 +31,6 @@ if (file_exists($rrd_file)) {
 }
 var_dump($value);
 echo "<br/>";
+echo date($value["last_update"]);
 echo $value["data"][0];
 //echo "Received data from sensor=$sensor, value=$value";
