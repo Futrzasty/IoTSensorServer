@@ -8,9 +8,24 @@
     <title>IoT Server</title>
 </head>
 <body style="background-color: black; font-family: Arial, sans-serif;">
-
+<?php
+function get_JSON_value ($sensor) {
+    $uchwyt = fopen("http://husky.mruczek.org/IoTSensorServer/get_last_json.php?sensor=$sensor", "rb");
+    $tresc = stream_get_contents($uchwyt);
+    fclose($uchwyt);
+    return json_decode($tresc, true);
+}
+?>
+?>
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
-    Temperatura (s01):<br/>
+    Temperatura (s01):
+    <?php
+    $j = get_JSON_value('s01');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
     <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
     Temperatura (s02b):<br/>
     <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
