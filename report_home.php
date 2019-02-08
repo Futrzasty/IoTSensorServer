@@ -108,7 +108,33 @@ function get_JSON_value ($sensor) {
     ?>
     <br/>
     <img alt="wykres" src="rrd_graph.php?s06;value;temp;end-48h"/><br/>
-
+    Temperatura wewnętrzna MI (s07t):
+    <?php
+    $j = get_JSON_value('s07t');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
+    <img alt="wykres" src="rrd_graph.php?s07t;value;temp;end-48h"/><br/>
+    Wilgotość wewnętrzna MI (s07h):
+    <?php
+    $j = get_JSON_value('s07h');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
+    <img alt="wykres" src="rrd_graph.php?s07h;value;humi;end-48h"/><br/>
+    Stan baterii MI (s07b):
+    <?php
+    $j = get_JSON_value('s07b');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
+    <img alt="wykres" src="rrd_graph.php?s07b;value;batt;end-48h"/><br/>
 </div>
 
 
