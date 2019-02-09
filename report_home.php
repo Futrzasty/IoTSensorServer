@@ -135,6 +135,24 @@ function get_JSON_value ($sensor) {
     ?>
     <br/>
     <img alt="wykres" src="rrd_graph.php?s07b;value;batt;end-48h"/><br/>
+    Temperatura wewnętrzna NRF Battery Sensor (s08t):
+    <?php
+    $j = get_JSON_value('s08t');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
+    <img alt="wykres" src="rrd_graph.php?s08t;value;temp;end-48h"/><br/>
+    Stan baterii NRF Battery Sensor (s08b):
+    <?php
+    $j = get_JSON_value('s08b');
+    $v = $j["Value"];
+    $d = $j["Date"];
+    echo " ".$v." @ ".$d;
+    ?>
+    <br/>
+    <img alt="wykres" src="rrd_graph.php?s08b;value;batt;end-48h"/><br/>
 </div>
 
 

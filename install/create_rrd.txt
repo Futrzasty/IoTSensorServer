@@ -6,6 +6,8 @@ rrdtool create filename.rrd \
 'RRA:AVERAGE:0.5:120:5000' \
 'RRA:AVERAGE:0.5:600:5000'
 
+rrdtool create s08b.rrd --step '30' 'DS:value:GAUGE:60:U:U' 'RRA:AVERAGE:0.5:2:1000' 'RRA:AVERAGE:0.5:30:1000' 'RRA:AVERAGE:0.5:120:5000' 'RRA:AVERAGE:0.5:600:5000'
+
 Calculated value (submit to refresh)
 Archive point is saved every 1min, archive is kept for 16hour 40min back.
 Archive point is saved every 15min, archive is kept for 10day 10hour back.
