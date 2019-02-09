@@ -27,10 +27,15 @@ rrdtool create filename.rrd \
 'RRA:AVERAGE:0.5:60:5000' \
 'RRA:AVERAGE:0.5:300:5000'
 
-rrdtool create filename.rrd --step '60' 'DS:value:GAUGE:60:U:U' 'RRA:AVERAGE:0.5:1:1000' 'RRA:AVERAGE:0.5:15:1000' 'RRA:AVERAGE:0.5:60:5000' 'RRA:AVERAGE:0.5:300:5000'
+rrdtool create s07t.rrd --step '60' 'DS:value:GAUGE:120:U:U' 'RRA:AVERAGE:0.99:1:1000' 'RRA:AVERAGE:0.99:15:1000' 'RRA:AVERAGE:0.99:60:5000' 'RRA:AVERAGE:0.99:300:5000'
 
 Calculated value (submit to refresh)
 Archive point is saved every 1min, archive is kept for 16hour 40min back.
 Archive point is saved every 15min, archive is kept for 10day 10hour back.
 Archive point is saved every 1hour, archive is kept for 6month 25day 8hour back.
 Archive point is saved every 5hour, archive is kept for 2year 10month 6day 16hour back.
+
+
+cd /var/www/html/IoTSensorServer/rrd_data/
+
+chown www-data s07*
