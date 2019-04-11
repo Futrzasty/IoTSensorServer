@@ -9,4 +9,4 @@ $db_user = 'username';
 $db_pass = 'password';
 $db_name = 'dbname';
 
-$webserver_path = "/var/www/";
+$webserver_path = "/var/www/html/";
