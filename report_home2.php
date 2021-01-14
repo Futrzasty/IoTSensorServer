@@ -45,6 +45,7 @@ $kody  = array ("s01" => "Temperatura",
         echo "<br/><img alt=\"wykres\" src=\"rrd_graph.php?$code;value;temp;end-48h\"/><br/>";
         echo "Last: <a href=\"rrd_graph.php?$code;value;temp;end-4h\">4h</a> ";
         echo "<a href=\"rrd_graph.php?$code;value;temp;end-750h\">750h</a> ";
+        echo "<br/>";
     }
     ?>
 
