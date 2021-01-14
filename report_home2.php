@@ -16,7 +16,22 @@ function get_JSON_value ($sensor) {
     return json_decode($tresc, true);
 }
 
-$kody  = array ("s01" => "Temperatura", "s02b" => "Temperatura", "s02a" => "Ciśnienie atmosferyczne");
+$kody  = array ("s01" => "Temperatura",
+    "s02b" => "Temperatura",
+    "s02a" => "Ciśnienie atmosferyczne",
+    "s03" => "Temperatura zewnętrzna",
+    "s04t" => "Temperatura",
+    "s04p" => "Ciśnienie atmosferyczne",
+    "s04h" => "Wilgotność",
+    "s04i" => "IAQ",
+    "s05" => "Temperatura zewnętrzna (battery)",
+    "s06" => "Temperatura zewnętrzna (battery)",
+    "s07t" => "Temperatura wewnętrzna MI",
+    "s07h" => "Wilgotość wewnętrzna MI",
+    "s07b" => "Stan baterii MI",
+    "s08t" => "Temperatura wewnętrzna NRF Battery Sensor",
+    "s08b" => "Stan baterii NRF Battery Sensor",
+);
 ?>
 
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
@@ -31,21 +46,6 @@ $kody  = array ("s01" => "Temperatura", "s02b" => "Temperatura", "s02a" => "Ciś
     }
     ?>
 
-    Temperatura (s01):
-    Temperatura (s02b):
-    Ciśnienie atmosferyczne (s02a):
-    Temperatura zewnętrzna (s03):
-    Temperatura (s04t):
-    Ciśnienie atmosferyczne (s04p):
-    Wilgotność (s04h):
-    IAQ (s04i):
-    Temperatura zewnętrzna (battery - s05):
-    Temperatura zewnętrzna (battery - s06):
-    Temperatura wewnętrzna MI (s07t):
-    Wilgotość wewnętrzna MI (s07h):
-    Stan baterii MI (s07b):
-    Temperatura wewnętrzna NRF Battery Sensor (s08t):
-    Stan baterii NRF Battery Sensor (s08b):
 </div>
 
 
