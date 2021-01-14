@@ -37,12 +37,14 @@ $kody  = array ("s01" => "Temperatura",
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
     <?php
     foreach ($kody as $code => $nazwa) {
-        echo $nazwa." ($code)";
+        echo $nazwa.": ($code)";
         $j = get_JSON_value($code);
         $v = $j["Value"];
         $d = $j["Date"];
         echo " ".$v." @ ".$d;
         echo "<br/><img alt=\"wykres\" src=\"rrd_graph.php?$code;value;temp;end-48h\"/><br/>";
+        echo "Last: <a href=\"rrd_graph.php?$code;value;temp;end-4h\">4h</a> ";
+        echo "<a href=\"rrd_graph.php?$code;value;temp;end-750h\">750h</a> ";
     }
     ?>
 
