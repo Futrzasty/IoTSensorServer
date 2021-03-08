@@ -15,144 +15,42 @@ function get_JSON_value ($sensor) {
     fclose($uchwyt);
     return json_decode($tresc, true);
 }
+
+$kody  = array ("s01" => "Temperatura",
+    "s02b" => "Temperatura",
+    "s02a" => "Ciśnienie atmosferyczne",
+    "s03" => "Temperatura zewnętrzna",
+    "s04t" => "Temperatura",
+    "s04p" => "Ciśnienie atmosferyczne",
+    "s04h" => "Wilgotność",
+    "s04i" => "IAQ",
+    "s05" => "Temperatura zewnętrzna (battery)",
+    "s06" => "Temperatura zewnętrzna (battery)",
+    "s07t" => "Temperatura wewnętrzna MI",
+    "s07h" => "Wilgotość wewnętrzna MI",
+    "s07b" => "Stan baterii MI",
+    "s08t" => "Temperatura wewnętrzna NRF Battery Sensor",
+    "s08b" => "Stan baterii NRF Battery Sensor",
+    "s09t" => "Temperatura wewnętrzna NRF Battery Sensor",
+    "s09b" => "Stan baterii NRF Battery Sensor",
+);
 ?>
-?>
+
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
-    Temperatura (s01):
     <?php
-    $j = get_JSON_value('s01');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
+    foreach ($kody as $code => $nazwa) {
+        echo $nazwa.": ($code)";
+        $j = get_JSON_value($code);
+        $v = $j["Value"];
+        $d = $j["Date"];
+        echo " ".$v." @ ".$d;
+        echo "<br/><img alt=\"wykres\" src=\"rrd_graph.php?$code;value;temp;end-48h\"/><br/>";
+        echo "Last: <a href=\"rrd_graph.php?$code;value;temp;end-4h\">4h</a> ";
+        echo "<a href=\"rrd_graph.php?$code;value;temp;end-750h\">750h</a> ";
+        echo "<br/><br/>";
+    }
     ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s01;value;temp;end-48h"/><br/>
-    Temperatura (s02b):
-    <?php
-    $j = get_JSON_value('s02b');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s02b;value;temp;end-48h"/><br/>
-    Ciśnienie atmosferyczne (s02a):
-    <?php
-    $j = get_JSON_value('s02a');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s02a;value;press;end-48h"/><br/>
-    Temperatura zewnętrzna (s03):
-    <?php
-    $j = get_JSON_value('s03');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s03;value;temp;end-48h"/><br/>
-    Temperatura (s04t):
-    <?php
-    $j = get_JSON_value('s04t');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s04t;value;temp;end-48h"/><br/>
-    Ciśnienie atmosferyczne (s04p):
-    <?php
-    $j = get_JSON_value('s04p');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s04p;value;press;end-48h"/><br/>
-    Wilgotność (s04h):
-    <?php
-    $j = get_JSON_value('s04h');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s04h;value;temp;end-48h"/><br/>
-    IAQ (s04i):
-    <?php
-    $j = get_JSON_value('s04i');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s04i;value;press;end-48h"/><br/>
-    Temperatura zewnętrzna (battery - s05):
-    <?php
-    $j = get_JSON_value('s05');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s05;value;temp;end-48h"/><br/>
-    Temperatura zewnętrzna (battery - s06):
-    <?php
-    $j = get_JSON_value('s06');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s06;value;temp;end-48h"/><br/>
-    Temperatura wewnętrzna MI (s07t):
-    <?php
-    $j = get_JSON_value('s07t');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s07t;value;temp;end-48h"/><br/>
-    Wilgotość wewnętrzna MI (s07h):
-    <?php
-    $j = get_JSON_value('s07h');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s07h;value;humi;end-48h"/><br/>
-    Stan baterii MI (s07b):
-    <?php
-    $j = get_JSON_value('s07b');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s07b;value;batt;end-48h"/><br/>
-    Temperatura wewnętrzna NRF Battery Sensor (s08t):
-    <?php
-    $j = get_JSON_value('s08t');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s08t;value;temp;end-48h"/><br/>
-    Stan baterii NRF Battery Sensor (s08b):
-    <?php
-    $j = get_JSON_value('s08b');
-    $v = $j["Value"];
-    $d = $j["Date"];
-    echo " ".$v." @ ".$d;
-    ?>
-    <br/>
-    <img alt="wykres" src="rrd_graph.php?s08b;value;batt;end-48h"/><br/>
+
 </div>
 
 
