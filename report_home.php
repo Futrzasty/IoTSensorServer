@@ -33,7 +33,8 @@ $kody  = array ("s01" => "Temperatura",
     "s08b" => "Stan baterii NRF Battery Sensor",
     "s09t" => "Temperatura wewnętrzna NRF Battery Sensor",
     "s09b" => "Stan baterii NRF Battery Sensor",
-);
+    "s10t" => "Temperatura wewnętrzna NRF Battery Sensor",
+    "s10b" => "Stan baterii NRF Battery Sensor",);
 ?>
 
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
