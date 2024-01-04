@@ -24,18 +24,19 @@ $kody  = array ("s01" => "Temperatura",
     "s04p" => "Ciśnienie atmosferyczne",
     "s04h" => "Wilgotność",
     "s04i" => "IAQ",
-    "s05" => "Temperatura zewnętrzna (battery)",
-    "s06" => "Temperatura zewnętrzna (battery)",
+    // "s05" => "Temperatura zewnętrzna (battery)",
+    // "s06" => "Temperatura zewnętrzna (battery)",
     "s07t" => "Temperatura wewnętrzna MI",
     "s07h" => "Wilgotość wewnętrzna MI",
     "s07b" => "Stan baterii MI",
     "s08t" => "Temperatura wewnętrzna NRF Battery Sensor",
     "s08b" => "Stan baterii NRF Battery Sensor",
-    "s09t" => "Temperatura wewnętrzna NRF Battery Sensor",
-    "s09b" => "Stan baterii NRF Battery Sensor",
-    "s10t" => "Temperatura wewnętrzna NRF Battery Sensor",
-    "s10b" => "Stan baterii NRF Battery Sensor",
-    "s11w" => "Stan licznika wody");
+    // "s09t" => "Temperatura wewnętrzna NRF Battery Sensor",
+    // "s09b" => "Stan baterii NRF Battery Sensor",
+    // "s10t" => "Temperatura wewnętrzna NRF Battery Sensor",
+    // "s10b" => "Stan baterii NRF Battery Sensor",
+    // "s11w" => "Stan licznika wody"
+    );
 ?>
 
 <div style="text-align: center; margin: auto; width: 100%; color: lightgray;">
