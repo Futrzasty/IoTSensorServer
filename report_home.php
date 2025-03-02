@@ -16,7 +16,8 @@ function get_JSON_value ($sensor) {
     return json_decode($tresc, true);
 }
 
-$kody  = array ("s01" => "Temperatura",
+$kody  = array (
+    "s01" => "Temperatura",
     "s02b" => "Temperatura",
     "s02a" => "Ciśnienie atmosferyczne",
     "s03" => "Temperatura zewnętrzna",
@@ -29,8 +30,8 @@ $kody  = array ("s01" => "Temperatura",
     // "s07t" => "Temperatura wewnętrzna MI",
     // "s07h" => "Wilgotość wewnętrzna MI",
     // "s07b" => "Stan baterii MI",
-    "s08t" => "Temperatura zewnętrzna NRF Battery Sensor",
-    "s08b" => "Stan baterii NRF Battery Sensor",
+    // last"s08t" => "Temperatura zewnętrzna NRF Battery Sensor",
+    // last"s08b" => "Stan baterii NRF Battery Sensor",
     // "s09t" => "Temperatura wewnętrzna NRF Battery Sensor",
     // "s09b" => "Stan baterii NRF Battery Sensor",
     // "s10t" => "Temperatura wewnętrzna NRF Battery Sensor",
